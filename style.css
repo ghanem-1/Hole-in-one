@@ -1,0 +1,316 @@
+
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,400;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap');
+
+:root{    /* تعريف متغيرات CSS داخل :root */
+    --color1: #000;               /*متغير*/
+    --color2: #7fc142;            /*متغير*/
+
+}
+  
+    *{ /*تنسيقات تستهدف جميع العناصر*/
+  font-family: 'Cairo', sans-serif;/* تحديد الخط الذي تم استدعائة لجمبع العناصر */
+  text-transform:capitalize; /*يجعل الحرف الأول من كل كلمة حرف كبير.*/
+  text-decoration: none; /*يزيل التنسيق الافتراضي للنصوص */
+  outline: none;
+  margin: 0;  padding: 0; /*يزيل المسافات الخارجية والداخلية الافتراضية*/
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*::selection{
+    background: var(--color1); /* استدعاء المتغيرات  باستخدام var()*/
+    color: #fff;
+}
+html{ /*تنسيق عنصر HTML*/
+    font-size: 62.5%;
+    overflow-x: hidden; /* يخفي أي محتوى يتجاوز حدود الصفحة.*/
+}
+.flex{
+  display: flex;
+}
+
+header { /*تنسيقات عنصر(header)*/
+    width: 100%; /*عرض العنصر بنسبة 100% من العرض الكلي في الشاشة*/
+    height: 10vh;
+    padding: 0 20px;
+    background: #fff; /*لون خلفية العنصر*/
+    position: fixed;   /*يجعل العنصر ثابت في حالة التمرير*/
+    top: 0rem; left: 50%;     /* هذا الوسن يستخدم لتحديد مكان عرض العناصر */           
+    transform: translateX(-50%); /*كاوظفية الوسن الذي يسبقة*/ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;  /*يحدد أولوية العرض فوق العناصر الأخرى بحيث لا يسمع بأن تكون هنالك اي عناصر فةق العناصر المحدده في هذا الوسن*/
+    
+}
+header .navbar ul{               /* تسيق عناصر القائمة المحددة*/
+    display: flex;              /*يجعل عناصر القائمة في صف واحد*/
+    align-items: center;       /*يوسّط العناصر عموديًا*/
+    justify-content: space-between;  /*يوزع العناصر بالتساوي مع ترك فراغات بينها*/
+    list-style: none;       /*يزيل النقاط من القائمة*/ 
+     direction: rtl;
+}
+header .navbar ul li{
+    margin: 0 1rem;  /*اضافة مسافة افقية بمقدار (1rem)*/
+    
+}
+header .navbar ul li a{ /*تنسيق الروابط في القائمة*/
+    font-size: 2.1rem;          /*حجم الخط*/
+    color:var(--color1) ;       /*لون وسن ال var*/
+    transition: .2s;    
+}
+header .navbar ul li a:hover{   /*تنسيق النعاصر المحددة عند التمرير (عناصر القائممة) */
+    color:var(--color2) ;   /* عند التمرير على النص يتم تغير لونه الى اخضر*/
+}
+header .logo{
+    margin: 10px 0;
+  /*  margin-right: auto; /* دفع الـ LOGO إلى اليسار */
+    
+}
+
+
+header .fa-bars{
+    font-size: 3rem; /*حجم العنصر*/
+    color: var(--color1); /*لونه*/
+    cursor: pointer ; /* تغيير شكل المؤشر عند التمرير فوقها للدلالة على أنها قابلة للنقر*/
+    display: none; /*لجعل هذا العنصر غير ظاهر في الشاشات الكبيرة*/
+    transition: .2s;
+}
+
+header .fa-xmark{
+transform: rotate(180deg);
+color: var(--color2);
+transition: .2s;
+}
+
+.header-active{
+    top: 0;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
+}
+
+button {
+  border: none;
+  background: none;
+  outline: none;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.primary-btn {
+  padding: 15px 40px;
+  background: var(--color2);
+  font-weight: bold;
+  color: white;
+}
+
+.secondary-btn {
+  padding: 15px 40px;
+  background: none;
+  border: 2px solid white;
+  font-weight: bold;
+  color: white;
+}
+.secondary-btn:hover{
+  background-color: #000000a6;
+}
+.footer {
+
+    background-color: #1d1d2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;      
+    font-size: 1.5rem;
+    color: #fff;
+  padding: 75px;
+  text-align: center;
+  }
+  .footer .fo1{
+    width: 70%;
+    
+  }
+  .footer .fo2{
+  width: 30%;
+  font-size: 2rem;
+  }
+  .footer .fo3{
+    width: 100%;
+  }
+  .footer .fo4{
+    width: 100%;
+  }
+/*Media queries*/
+@media (max-width: 769px){ 
+    html { font-size: 55%; }    
+    header .fa-bars {
+    display: block ;
+    }
+    
+    header .navbar {
+    position: fixed;
+    top: -100rem; left: 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 1rem;
+    opacity: 0;
+    transition: .2s linear;
+    }
+    
+    header .navbar ul{
+        flex-flow: column;
+        padding: 2rem 0;
+        
+    }
+    /*مؤقت*/
+    header .navbar ul li{
+        margin: 1rem 0; /*مش ضروري*/
+        width: 100%;
+        text-align: center;
+    }
+    header .navbar ul li a{
+        display: block;
+        font-size: 3rem;
+    }
+header .nav-toggle{
+    top: 11vh; /*5.7*/
+    opacity: 1;
+}
+}
+/* تنسيقات خاصة بالهواتف (أصغر من 768 بكسل) */
+@media (max-width: 768px) {
+    .footer {
+      /* نجعل العناصر تتكدس عموديًا بدلاً من أفقيًا */
+      flex-direction: column;
+      
+      /* نقلل الفجوة بين العناصر */
+      gap: 20px;  
+      
+      /* نجعل الارتفاع تلقائيًا كي يتمدد حسب المحتوى */
+      height: auto;  
+      
+      /* تقليل الحشوة لتناسب الشاشة الصغيرة */
+      padding: 40px 20px;  
+      
+      /* تصغير الخط قليلاً */
+      font-size: 1rem;
+    }
+  
+    /* نجعل كل عنصر يأخذ العرض الكامل وتُمحاذى النص في المنتصف */
+    .footer .fo1,
+    .footer .fo2,
+    .footer .fo3,
+    .footer .fo4 {
+      width: 100%;
+      text-align: center;
+    }
+    
+    /* يمكن تقليل حجم الأيقونات (اختياري) */
+    .footer .fo2 i {
+      font-size: 1.8rem;
+      margin: 10px 0; /* لإضافة مسافة عمودية بين الروابط */
+    }
+  }
+
+   /*--------about---------*/
+ .about .left, .about .right {
+  width: 50%;
+  padding: 30px;
+}
+.about .right img{
+  width: 100%;
+
+}
+
+.heading h1 {
+  font-size: 100px;
+  font-weight: 500;
+  opacity: 0.1;
+  font-family: serif;
+  position: absolute;
+  top: -30px;
+}
+
+
+
+.about .heading h1 {
+  top: 55px;
+}
+
+.about {
+  position: relative;
+}
+
+.about .left {
+  margin-top: 30px;
+}
+
+.about p {
+  direction: rtl;
+  font-size: 15px;
+}
+
+.about button {
+  margin: 30px 0;
+}
+
+/*--------about---------*/
+
+
+/*--------about---------*/
+
+/* عندما تصبح الشاشة أصغر من 768px (أجهزة محمولة) */
+@media (max-width: 813px)
+ {
+  /* نجعل العناصر تترتب عموديًا بدل الأفقي */
+  .about .container {
+    flex-direction: column; /* ترتيب كعناصر مكدسة فوق بعض */
+  }
+  
+  .about .left,.about .right {
+    align-items: center;
+    width: 100%; /* عرض كامل للشاشة */
+    padding: 15px; /* تخفيف المسافات الداخلية */
+  }
+  .about .right {
+    display: flex;
+    justify-content: center; /* توزيع أفقي في الوسط */
+    order: 2;
+   }
+   .about .left{
+    order: 1;
+   }
+  
+  /* تعديل حجم العنوان الكبير ليصبح أنسب للهواتف */
+  .about .heading h1 {
+    display: none; /*لأخفاء العنصر Welcome*/
+  }
+  
+  /* تحسين العنوان الفرعي للشاشات الصغيرة */
+  .about .heading h2 {
+    font-size: 30px; /* حجم خط أنسب للقراءة */
+    margin: 20px 0; /* تقليل المسافات حوله */
+  }
+  
+  /* تحسين الفقرات النصية */
+  .about p {
+    font-size: 14px; /* خط أصغر ليتسع المحتوى */
+    text-align: justify; /* محاذاة النص من الجانبين */
+  }
+  
+  /* تحسين عرض الصورة */
+  .about .right img {
+    max-width: 80%; /* منع الصورة من تجاوز عرض الشاشة */
+    height: auto; /* الحفاظ على نسب الصورة */
+  }
+  
+  /* جعل الزر ممتد بالكامل وأكثر ملاءمة للأصابع */
+  .about button.primary-btn {
+    padding: 12px 20px; /* حجم مناسب للضغط */
+    font-size: 16px; /* نص واضح على الشاشات الصغيرة */
+  }
+}
+

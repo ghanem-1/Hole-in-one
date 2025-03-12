@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.head {
+  align-items: center;
+    width: 100%;
+    height: 50vh; 
+    background-size: cover; 
+    position: relative;
+    direction: rtl;
+    display: flex;
+    overflow: hidden;
+    justify-content: flex-start;
+  }
+  .Restaurants{background: linear-gradient(rgba(44, 43, 43, 0.589), rgba(10, 0, 14, 0.658)), url(banner-1.png) no-repeat center center/cover;;}
+
+.Lisbom,.Hole-in-one-c{background: linear-gradient(rgba(44, 43, 43, 0.589), rgba(10, 0, 14, 0.658)), url(Back-ground-Golf.jpg) no-repeat center center/cover;;}
+.seaview { background-image: linear-gradient(rgba(44, 43, 43, 0.589),rgba(10, 0, 14, 0.658)),url(sea_view.jpg); background-position:no-repeat center center/cover;;  }
+
+.hotel-1 {background: linear-gradient(rgba(44, 43, 43, 0.589), rgba(10, 0, 14, 0.658)), url(hotel-background.jpg) no-repeat center center/cover;}
+.title {
+    text-align: right;
+    color: white;
+    padding: 20px;
+    z-index: 2;
+}
+.coffe-back{background: linear-gradient(rgba(44, 43, 43, 0.589), rgba(10, 0, 14, 0.658)), url(coffee-house-back.jpg) no-repeat center center/cover ;}
+.hotel-2{background: linear-gradient(rgba(44, 43, 43, 0.589), rgba(10, 0, 14, 0.658)), url(IMG--1.jpg) no-repeat center center/cover;;}
+h2,h1{
+    font-family: 'Times New Roman', Times, serif;
+}
+.title h1 {
+    font-size: 5rem; /* حجم خط متجاوب */
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    direction: rtl;
+}
+.heading_1{direction: rtl;}
+.back {
+    background: rgba(0,0,0,0.5);
+    padding: .5rem 1rem;
+    border-radius: 50px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.back:hover {
+    background: rgba(0,0,0,0.7);
+}
+
+.title a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.about h2{
+    font-size: 5rem;
+}
+.coffe h2{
+  padding: 30px;
+font-size: 3rem;
+}
+.primary-btn{
+    border-radius: 30px;
+    font-size: 130%;
+}
+.btn{
+  
+  justify-self: end;
+}
+.hr{
+  justify-items: center;
+}
+hr{
+  width: 90%;
+}
+.about p {
+  padding: 20px;
+    direction: rtl;
+    font-size: 17px;
+  }
+
+  .suggestion {
+    justify-content: center;
+    display: grid;
+  }
+  .Cards-sug{
+    margin: 90px auto;
+  }
+  .sug {
+    border-radius: 2rem;
+    margin: 30px 30px;
+    height: 70vh;
+    width: 50vh;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .title-sug{
+    text-align: center;
+    direction: rtl;
+    font-size: 2rem;
+    font-weight: bold;
+}
+  .sug .image img{
+    border-radius: 1rem 1rem 0rem 0rem;
+    width: 50vh;
+    height: 35vh;    
+    object-fit: cover;
+  }
+  .sug .content{
+    padding: 20px;
+  }
+
+  .sug .content h2{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2f854c;
+  }
+  .sug .content p{
+    direction: rtl;
+    font-size: 1.5rem;
+    color: #718096;
+    margin-top: 10px;
+  }
+  .sug .content a{
+    font-size: 1.7rem;
+    color: #38a169;
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+  }
+  .sug .content a:hover{
+    color: blue;
+    font-weight: 450;
+  }
+
+ @media (max-width: 1139px){
+/* تنسيق البطاقات */
+.sug {
+  border-radius: 2rem;
+  margin: 30px;
+  height: 70vh;
+  width: 65vh;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* تنسيق الصورة داخل البطاقة */
+.sug .image img {
+  border-radius: 1rem 1rem 0 0;
+  width: 100%;
+  height: 40vh;    
+  object-fit: cover;
+}
+ }
+/* ************************** */
+
+
+ @media (max-width: 768px) {
+  .head {
+      height: 40vh; /* تقليل الارتفاع لتناسب شاشة أصغر */
+  }
+  .title h1 {
+      font-size: 3rem; /* تقليل حجم العنوان */
+  }
+  .sug {
+      width: 90%; /* جعل البطاقة تأخذ عرض الشاشة مع هوامش مناسبة */
+      height: auto; /* السماح بتعديل الارتفاع تلقائياً */
+      margin: 20px auto;
+  }
+  .sug .image img {
+      height: auto; /* السماح للصورة بتعديل ارتفاعها بما يتناسب مع العرض */
+  }
+  .sug .content h2 {
+      font-size: 2.5rem;
+  }
+  .sug .content p {
+      font-size: 1.2rem;
+  }
+  .sug .content a {
+      font-size: 1.5rem;
+  }
+}
+
+/* Media Query للأجهزة الصغيرة (max-width: 480px) */
+@media (max-width: 480px) {
+  .head {
+      height: 30vh;
+  }
+  .title h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+  }
+  .suggestion {
+      flex-direction: column; /* ترتيب البطاقات عمودياً */
+      align-items: center;
+  }
+  .sug {
+      width: 95%; /* تقريباً ملء الشاشة مع هامش صغير */
+      margin: 15px 0;
+  }
+  .sug .content h2 {
+      font-size: 2rem;
+  }
+  .sug .content p {
+      font-size: 1rem;
+  }
+  .sug .content a {
+      font-size: 1.3rem;
+  }
+}
+
+

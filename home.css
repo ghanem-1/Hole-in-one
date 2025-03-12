@@ -1,0 +1,336 @@
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+/* استيراد خطوط جوجل (يجب أن تكون في أعلى الملف) */
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,400;1,900&display=swap');
+
+
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+/* المتغيرات العامة (تنطبق على كامل الموقع) */
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+:root {
+  --color1: #000;               /*متغير*/
+  --color2: #7fc142;            /*متغير*/
+}
+
+* {
+  font-family: 'Cairo', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1, h2 ,h3{
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+
+.flex_space {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  max-width: 85%;
+  margin: auto;
+}
+/*--------home---------*/
+.home {
+    height: 100vh;
+    color: #fff;
+  }
+  
+  .home img {
+    width: 100%;/* تجعل عرض الصورة يغطي كامل المسافه */
+    height: 100vh;  /* تجعل ارتفاع الصورة يساوي ارتفاع نافذة العرض بالكامل */
+    object-fit: cover; /* تحافظ على نسبة العرض للارتفاع الأصلية للصورة وتملأ الحاوية، مع قص الأجزاء الزائدة إن وجدت*/
+    object-position: center center; /* تحديد منطقة التركيز */
+
+  }
+  
+  .home .text {
+    position: absolute;
+    top: 35%;
+    left: 5%;
+  }
+  
+  .home .text h1 {
+    font-size: 80px;
+    font-family: serif;
+    font-weight: 400;
+  }
+  
+  .home p {
+    direction: rtl;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+  
+  .home button {
+    margin-right: 20px;
+  }
+  
+  .owl-nav .owl-prev,
+  .owl-nav .owl-next {
+    position: absolute;
+    top: 40%;
+    height: 50px;
+    width: 50px;
+    background: rgba(0, 0, 0, 0.5) !important;
+    color: #fff;
+  }
+  
+  .owl-nav .owl-prev {
+    left: 0;
+  }
+  
+  .owl-nav .owl-next {
+    right: 0;
+  }
+  
+  /*--------home---------*/
+  /*--------about---------*/
+.about .left, .about .right {
+  width: 50%;
+  padding: 30px;
+}
+.about .right img{
+  width: 100%;
+
+}
+
+.heading h1 {
+  font-size: 100px;
+  font-weight: 500;
+  opacity: 0.1;
+  font-family: serif;
+  position: absolute;
+  top: -30px;
+}
+
+.heading h2 {
+  margin: 30px 0;
+  font-size: 45px;
+  font-family: serif;
+  font-weight: 400;
+}
+
+.about .heading h1 {
+  top: 55px;
+}
+
+.about {
+  position: relative;
+}
+
+.about .left {
+  margin-top: 30px;
+}
+
+.about p {
+  direction: rtl;
+  font-size: 15px;
+}
+
+@media (max-width: 813px) {
+  /* نجعل العناصر تترتب عموديًا بدل الأفقي */
+  .about .container {
+    flex-direction: column; /* ترتيب كعناصر مكدسة فوق بعض */
+  }
+  
+  /* نجعل كل قسم (النص والصورة) يشغل العرض الكامل */
+  .about .left,.about .right {
+    align-items: center;
+    width: 100%; /* عرض كامل للشاشة */
+    padding: 15px; /* تخفيف المسافات الداخلية */
+  }
+  .about .right {
+    display: flex;
+    justify-content: center; /* توزيع أفقي في الوسط */
+   }
+  
+  /* تعديل حجم العنوان الكبير ليصبح أنسب للهواتف */
+  .about .heading h1 {
+    display: none; /*لأخفاء العنصر Welcome*/
+  }
+  
+  /* تحسين العنوان الفرعي للشاشات الصغيرة */
+  .about .heading h2 {
+    font-size: 30px; /* حجم خط أنسب للقراءة */
+    margin: 20px 0; /* تقليل المسافات حوله */
+  }
+  
+  /* تحسين الفقرات النصية */
+  .about p {
+    font-size: 14px; /* خط أصغر ليتسع المحتوى */
+    text-align: justify; /* محاذاة النص من الجانبين */
+  }
+  
+  /* تحسين عرض الصورة */
+  .about .right img {
+    max-width: 80%; /* منع الصورة من تجاوز عرض الشاشة */
+    height: auto; /* الحفاظ على نسب الصورة */
+  }
+  
+  /* جعل الزر ممتد بالكامل وأكثر ملاءمة للأصابع */
+  .about button.primary-btn {
+    padding: 12px 20px; /* حجم مناسب للضغط */
+    font-size: 16px; /* نص واضح على الشاشات الصغيرة */
+  }
+}
+@media (min-width: 814px) and (max-width: 1000px) { .about .right img{width: 120%;}}
+
+/* ---------------------------------------------------------------------------------------------- */
+  .Facilities{
+    display: flex;          
+    align-items: center;
+    justify-content: center; 
+    flex-direction: row;    
+    gap: 150px;              
+    box-shadow: var(--color1);
+    background: linear-gradient(rgba(45, 60, 84, 0.815), rgba(45, 60, 84)), url(https://res.cloudinary.com/simplotel/image/upload/w_5000,h_3333/x_0,y_833,w_5000,h_1667,r_0,c_crop,q_80,fl_progressive/w_1650,f_auto,c_fit/quality-inn-elite-amritsar/bqt_do4qig) no-repeat center center ;
+    color: floralwhite;
+    height: 30vh;
+    font-family: serif;
+
+  }
+  .heading2 h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: serif;
+    font-weight: 400;
+    color: #0c1158;
+    padding: 30px 0px;
+  }
+  
+  .Facilities h1{ 
+  font-weight:400;
+    font-size: 40px;
+    text-align: center;
+  }
+  .Facilities h2{ 
+    font-weight:400;
+    font-size: 40px;
+    text-align: center;
+  }
+.Facilities hr{
+  width: 50%;
+  margin: 10px auto;
+  background: var(--color2);
+  height: 2px;
+  border: none;
+
+} 
+@media (max-width: 768px) {
+  /* تعديل تنسيق العنوان في القسم heading2 */
+  .heading2 h1 {
+    font-size: 30px;          /* تقليل حجم الخط للعناوين على الشاشات الصغيرة */
+    padding: 10px;            /* إضافة بعض الحشوة لتحسين المسافات */
+    text-align: center;       /* محاذاة العنوان في المنتصف */
+  }
+  
+  .Facilities {
+    flex-direction: column;   /* ترتيب العناصر عموديًا بدلًا من أفقي */
+    gap: 20px;                /* تقليل المسافة الفاصلة بين العناصر */
+    height: auto;             /* السماح للقسم بأن يمتد حسب المحتوى */
+    padding: 20px 0;          /* إضافة حشوة عمودية لتحسين التباعد */
+    justify-content: center;  /* الحفاظ على المحاذاة في المنتصف أفقيًا */
+  }
+  
+  .Facilities > div {
+    width: 100%;              /* جعل كل عنصر يشغل عرض كامل الحاوية */
+    text-align: center;       /* محاذاة النصوص داخل العناصر إلى المنتصف */
+  }
+  
+  /* تعديل أحجام الخطوط للعناوين داخل Facilities */
+  .Facilities h1,
+  .Facilities h2 {
+    font-size: 24px;          /* تقليل حجم الخط للعناوين والأرقام */
+  }
+  
+  /* تحسين عرض الخط الفاصل (hr) داخل Facilities */
+  .Facilities hr {
+    width: 50%;               /* تقليل عرض الخط الفاصل */
+    margin: 5px auto;         /* تقليل المسافات حوله ومحاذاته في المنتصف */
+  }
+}
+
+
+
+/* نبدأ بتحديد موضع العنصر الذي يحتوي على المعرض */
+.gallery {
+  position: relative;  /* يعني أن العنصر سيكون بموقع نسبي، مما يسمح لنا باستخدام خصائص الوضع (مثل absolute) داخل هذا العنصر */
+}
+
+/* تنسيق الصور داخل المعرض */
+.gallery img {
+      /* تجعل عرض الصورة يمتد لكامل عرض العنصر الحاوي */
+     /* تجعل ارتفاع الصورة يمتد لكامل ارتفاع العنصر الحاوي */
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+
+.gallery .img {
+  position: relative;  /* نستخدم الوضع النسبي هنا لإمكانية إضافة تأثيرات أو عناصر تراكب مستقبلًا */
+}
+
+
+.gallery .owl-nav .owl-prev {
+  left: 85%;   
+}
+
+.gallery .owl-nav .owl-next {
+  right: 5%;    
+}
+
+.gallery .owl-nav .owl-prev,
+.gallery .owl-nav .owl-next {
+  top: -40%;    
+}
+
+.gallery .owl-nav .owl-prev,
+.gallery .owl-nav .owl-next {
+  background: var(--color2) !important; 
+         
+}
+@media (max-width: 768px) {
+  .gallery .heading h2 {
+    font-size: 24px;     
+    text-align: center;   
+    padding: 10px 0;     
+  }
+  
+  .gallery img{
+    height: 564px;
+    width: 564px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  .gallery .owl-nav .owl-prev {
+    left: 70%;    
+    top: -20%;    
+  }
+  
+  .gallery .owl-nav .owl-next {
+    right: 5%;    /* يبقى عند نفس الموقع أفقيًا */
+    top: -20%;    /* تعديل الموضع العمودي لتقليل الارتفاع */
+  }
+  
+  .gallery .items {
+    margin: 0 5px;  /* تقليل الهوامش بين العناصر بحيث يصبح الفاصل 5 بكسل فقط */
+  }
+}
+/*--------gallery---------*/

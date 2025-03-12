@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,400;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+      
+        :root{    /* تعريف متغيرات CSS داخل :root */
+          --color1: #000;               /*متغير*/
+          --color2: #7fc142;            /*متغير*/
+      
+      }
+
+   * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+    }
+
+  body {
+    font-family: 'Tajawal', sans-serif;;
+    background: #eee; /* خلفية فاتحة */
+}
+.heading_1 h2{
+  margin: 30px 0;
+  font-size: 45px;
+  font-family: serif;
+  font-weight: 400;  
+}
+.ab{
+  margin-top: 5rem;
+}
+.titleP 
+{
+  margin-top: 7rem;
+  padding: 0px 10rem;
+  display: flex ;
+  text-align: right X; /* محاذاة لليمين */
+  direction: rtl; /* اتجاه النص من اليمين لليسار */
+}
+.titleP p{
+  font-size: 1.5rem;
+} 
+
+.about p {
+  direction: rtl;
+  font-size: 15px;
+}
+
+
+.home{
+  display: flex;
+  justify-content: center;
+}
+.home p{
+  font-size: 1.5rem;
+}
+.home img {
+  width: 700px;
+  height: 700px;
+  object-fit: cover;  /* تحافظ على نسبة العرض للارتفاع الأصلية للصورة وتملأ الحاوية، مع قص الأجزاء الزائدة إن وجدت */
+  object-position: center center; /* تحديد منطقة التركيز */
+}
+.owl-carousel{
+  width: 700px;
+  height: 700px;
+
+}
+
+
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+  position: absolute;
+  top: 40%;
+  height: 50px;
+  width: 50px;
+  
+}
+
+.owl-nav .owl-prev {
+  left: -7%;
+  top: 20%;
+}
+
+.owl-nav .owl-next {
+  right: -7%;
+  top: 20%;
+}
+.fa-chevron-left,
+.fa-chevron-right{
+color: #2D3748;
+font-weight: 600;
+font-size: 5rem;
+}
+
+@media (max-width: 780px) {
+  .home{
+    height: 1vh;
+  }
+  .home img{
+  height: 300px;
+  width: 400px;
+}
+.owl-carousel{
+  width: 400px;
+  height: 300px;
+
+}
+
+ .owl-nav .owl-prev {
+    left: -20%;
+    top: 30%;
+  }
+  
+  .owl-nav .owl-next {
+    right: -20%;
+    top: 30%;
+  }
+
+}
+@media (max-width: 700px) {
+  
+.owl-nav .owl-prev {
+  left: -10%;
+}
+
+.owl-nav .owl-next {
+  right: -10%;
+}
+
+}
+@media (max-width: 580px) {
+  
+  .owl-nav .owl-prev {
+    left: -25%;
+  }
+  
+  .owl-nav .owl-next {
+    right: -25%;
+ 
+  }
+  
+  }
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .home p {
+    font-size: 1.2rem;   /* تقليل حجم الخط قليلاً */
+  }
+  .home img {
+    width: 180px;        /* تقليل عرض الصورة */
+    height: 360px;       /* تقليل ارتفاع الصورة */
+  }
+}
+
+@media (max-width: 767px) {
+  .titleP{
+    margin: rem 8rem;
+  }
+  .home {
+    margin: 17rem 10rem;   /* تقليل المسافات الجانبية بشكل كبير لتناسب الشاشة الصغيرة */
+  }
+  .home p {
+    font-size: 1rem;     /* تقليل حجم الخط لتكون القراءة سهلة على الشاشات الصغيرة */
+  }
+
+  
+}
+   
+
+  .packages{
+    justify-content: center;
+    max-width: 1200px; 
+    margin: 40px auto; 
+    padding: 0 20px; /* مساحة داخلية جانبية */
+    display: grid; /* استخدام نظام Grid للتنسيق */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* إنشاء أعمدة متجاوبة */
+    gap: 20px; /* فراغ بين العناصر */
+  }
+  
+    .Card{
+      background: white; /* خلفية بيضاء */
+      border-radius: 15px; /* زوايا مدورة */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+      overflow: hidden; /* إخفاء المحتوى الزائد */
+      width: 100%;
+    }
+    .Card-btn {
+      font-size: 1.2rem;
+      display: block; /* عرض كامل للعنصر */
+      text-align: center center; /* توسيط النص */
+      padding: 5px; /* مساحة داخلية */
+      background: var(--color2); /* خلفية باللون الأساسي */
+      color: #FFF; /* لون النص */
+      text-decoration: none; /* إزالة التسطير */
+      border-radius: 8px; /* زوايا مدورة */
+      margin: 15px auto; /* توسيط أفقي */
+      width: 95%; /* عرض الزر */
+      
+    }    @media (max-width: 660px){
+      .packages{
+        width: 100px;
+        
+      }
+      .Card-btn{
+        width: 220px;
+      }
+    }
+    .Card .image img{
+      width: 50rem;
+      height: 35vh;  /* تجعل ارتفاع الصورة يساوي ارتفاع نافذة العرض بالكامل */
+      object-fit: cover; /* تحافظ على نسبة العرض للارتفاع الأصلية للصورة وتملأ الحاوية، مع قص الأجزاء الزائدة إن وجدت*/
+      object-position: center center; /* تحديد منطقة التركيز */ 
+    }
+    .card:hover {
+      transform: translateY(-50px); /* تحريك البطاقة لأعلى 5px */
+    }
+    .Card .heading{
+     background:  #F4B41B; /* خلفية باللون الثانوي */
+     height: 7vh;
+     text-align: center; /* محاذاة النص للوسط */
+     color: #FFFFFF; /* لون النص الفاتح */
+    }
+    .Card .heading h2{
+      font-size: 1.8rem; /* حجم الخط */
+      margin-bottom: 10px; /* هامش سفلي */
+    }
+    .packages .content ul{
+      list-style: none; /* إزالة النقاط من القائمة */
+      padding: 15px; /* مساحة داخلية */ 
+    }
+    .packages .content li{
+      padding: 8px 0; /* مساحة عمودية */
+      border-bottom: 1px solid #eee; /* خط فاصل بين العناصر */
+    }
+    .currency {
+      text-align: center; /* توسيط النص */
+      font-size: 2rem; /* حجم الخط */
+      margin: 15px 0; /* هامش عمودي */
+      color: var(--color2); /* لون بالسعر الأساسي */  
+    }
+
+
+/* زر الحجز/الإجراء */
+
+
+@media (max-width: 581px) {
+  .home img{
+  height: 300px;
+  width: 300px;
+}
+.owl-carousel{
+  height: 300px;
+  width: 300px;
+}
+
+ .owl-nav .owl-prev {
+    left: -15%;
+  }
+  
+  .owl-nav .owl-next {
+    right: -15%;
+ 
+  }
+
+}
+/* تنسيقات للشاشات الصغيرة (أقل من 768px) */
+@media (max-width: 768px) {
+  .header h1 {
+      font-size: 2rem; /* تصغير حجم العنوان */
+  }
+}
+
+@media (max-width: 360px){
+
+  .owl-nav .owl-prev {
+    left: -13%;
+  }
+  
+  .owl-nav .owl-next {
+    right: -13%;
+ 
+  }}
